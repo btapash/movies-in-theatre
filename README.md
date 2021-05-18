@@ -1,3 +1,9 @@
+Website running at: https://movies-in-theatre.netlify.app/
+
+To load in your local system, clone the repo, then in the command type "npm install" to install all the dependencies, then type "npm start". This will start the app in your local host ("http://localhost:3000/").
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
