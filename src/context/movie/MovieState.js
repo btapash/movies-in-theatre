@@ -2,7 +2,7 @@ import React, { useReducer } from "react";
 import axios from 'axios';
 import MovieContext from "./movieContext";
 import MovieReducer from "./movieReducer";
-import { SEARCH_MOVIES, GET_MOVIE_INFO } from "../types";
+import { GET_MOVIE_INFO } from "../types";
 
 const MovieState = (props) => {
   const initialState = {
@@ -11,18 +11,6 @@ const MovieState = (props) => {
   };
 
   const [state, dispatch] = useReducer(MovieReducer, initialState);
-
-  //Search Users
-
-  const searchMovies = async (text) => {
-    const response = await axios.get(
-      `https://api.themoviedb.org/3/search/movie?api_key=721c5889c7db7d13bcf51921ee8ca384&query=${text}`
-    );
-    dispatch({
-      type: SEARCH_MOVIES,
-      payload: response.data.results,
-    });
-  };
 
   //Movie Info
 
